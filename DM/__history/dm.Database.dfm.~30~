@@ -1,0 +1,79 @@
+object dmData: TdmData
+  Height = 188
+  Width = 332
+  object fdConn: TFDConnection
+    Params.Strings = (
+      
+        'Database=D:\Delphi Projects\Bm projects for me\GestClients\DEPLO' +
+        'Y\APP\Data\Client.db'
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    Connected = True
+    Left = 56
+    Top = 24
+  end
+  object DriverSqlite: TFDPhysSQLiteDriverLink
+    Left = 144
+    Top = 24
+  end
+  object fdWaitCursor: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 232
+    Top = 24
+  end
+  object QryClient: TFDQuery
+    Active = True
+    Connection = fdConn
+    FetchOptions.AssignedValues = [evItems]
+    UpdateOptions.AssignedValues = [uvEDelete, uvEInsert, uvEUpdate]
+    SQL.Strings = (
+      '  SELECT * FROM Client'
+      ' ')
+    Left = 56
+    Top = 120
+    object fdtncfldQryClientID: TFDAutoIncField
+      FieldName = 'ID'
+    end
+    object wdmfldQryClientRef: TWideMemoField
+      FieldName = 'Ref'
+      BlobType = ftWideMemo
+    end
+    object wdmfldQryClientFirstname: TWideMemoField
+      FieldName = 'Firstname'
+      BlobType = ftWideMemo
+    end
+    object wdmfldQryClientLastname: TWideMemoField
+      FieldName = 'Lastname'
+      BlobType = ftWideMemo
+    end
+    object wdmfldQryClientTel: TWideMemoField
+      FieldName = 'Tel'
+      BlobType = ftWideMemo
+    end
+  end
+  object DBScript: TFDScript
+    SQLScripts = <
+      item
+        Name = 'CreateTable_Client'
+        SQL.Strings = (
+          ' CREATE TABLE Client ('
+          ' ID INTEGER PRIMARY KEY AUTOINCREMENT,'
+          '  Ref VARCHAR(50) ,'
+          '  FirstName VARCHAR(100),'
+          '  LastName VARCHAR(100),'
+          '  Tel VARCHAR(20) '
+          ';')
+      end>
+    Connection = fdConn
+    Params = <>
+    Macros = <>
+    FetchOptions.AssignedValues = [evItems, evAutoClose, evAutoFetchAll]
+    FetchOptions.AutoClose = False
+    FetchOptions.Items = [fiBlobs, fiDetails]
+    ResourceOptions.AssignedValues = [rvMacroCreate, rvMacroExpand, rvDirectExecute, rvPersistent]
+    ResourceOptions.MacroCreate = False
+    ResourceOptions.DirectExecute = True
+    Left = 144
+    Top = 120
+  end
+end

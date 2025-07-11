@@ -1,0 +1,63 @@
+object dmData: TdmData
+  Height = 188
+  Width = 332
+  object fdConn: TFDConnection
+    Params.Strings = (
+      
+        'Database=D:\Delphi Projects\Bm projects for me\GestClients\DEPLO' +
+        'Y\APP\Data2\Clients2.db'
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    LoginPrompt = False
+    Left = 56
+    Top = 24
+  end
+  object DriverSqlite: TFDPhysSQLiteDriverLink
+    Left = 144
+    Top = 24
+  end
+  object fdWaitCursor: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 232
+    Top = 24
+  end
+  object QryClient: TFDQuery
+    Connection = fdConn
+    FetchOptions.AssignedValues = [evItems]
+    UpdateOptions.AssignedValues = [uvEDelete, uvEInsert, uvEUpdate]
+    SQL.Strings = (
+      '  SELECT * FROM MyClients'
+      ' ')
+    Left = 56
+    Top = 120
+    object intgrfldQryClientID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object wdmfldQryClientRef: TWideMemoField
+      FieldName = 'Ref'
+      Origin = 'Ref'
+      Required = True
+      BlobType = ftWideMemo
+    end
+    object wdmfldQryClientFirstname: TWideMemoField
+      FieldName = 'Firstname'
+      Origin = 'Firstname'
+      Required = True
+      BlobType = ftWideMemo
+    end
+    object wdmfldQryClientLastname: TWideMemoField
+      FieldName = 'Lastname'
+      Origin = 'Lastname'
+      Required = True
+      BlobType = ftWideMemo
+    end
+    object lrgntfldQryClientTel: TLargeintField
+      FieldName = 'Tel'
+      Origin = 'Tel'
+      Required = True
+    end
+  end
+end

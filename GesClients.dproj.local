@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.940,D:\Delphi Projects\Bm projects for me\GestClients\DM\dm.Data.dfm=D:\Delphi Projects\Bm projects for me\GestClients\DM\dm.Database.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.883,C:\Users\Houcine\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Delphi Projects\Bm projects for me\GestClients\Main.View.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.344,C:\Users\Houcine\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Delphi Projects\Bm projects for me\GestClients\GesClients.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.390,D:\Delphi Projects\Bm projects for me\GestClients\Unit1.dfm=D:\Delphi Projects\Bm projects for me\GestClients\DM\dm.Data.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.883,C:\Users\Houcine\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Delphi Projects\Bm projects for me\GestClients\Main.View.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.443,=D:\Delphi Projects\Bm projects for me\GestClients\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.390,D:\Delphi Projects\Bm projects for me\GestClients\Unit1.pas=D:\Delphi Projects\Bm projects for me\GestClients\DM\dm.Data.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.940,D:\Delphi Projects\Bm projects for me\GestClients\DM\dm.Data.pas=D:\Delphi Projects\Bm projects for me\GestClients\DM\dm.Database.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.398,=C:\Users\Houcine\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

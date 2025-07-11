@@ -1,0 +1,268 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'TDBGrid '
+  ClientHeight = 476
+  ClientWidth = 906
+  Color = 2867157
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OnClick = FormClick
+  TextHeight = 15
+  object lbl1: TLabel
+    Left = 3
+    Top = 306
+    Width = 15
+    Height = 20
+    Caption = 'ID'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbl2: TLabel
+    Left = 3
+    Top = 335
+    Width = 22
+    Height = 20
+    Caption = 'Ref'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbl3: TLabel
+    Left = 3
+    Top = 364
+    Width = 74
+    Height = 20
+    Caption = 'First Name'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbl4: TLabel
+    Left = 3
+    Top = 393
+    Width = 71
+    Height = 20
+    Caption = 'Last Name'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbl5: TLabel
+    Left = 3
+    Top = 422
+    Width = 19
+    Height = 20
+    Caption = 'Tel'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblSearchlbl: TLabel
+    Left = 8
+    Top = 13
+    Width = 59
+    Height = 25
+    Caption = 'Search :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbl6: TLabel
+    Left = 756
+    Top = 452
+    Width = 151
+    Height = 24
+    Caption = 'El Houcine 2025'
+    Color = 16711808
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clPurple
+    Font.Height = -21
+    Font.Name = 'Bauhaus 93'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object dbnvgr1: TDBNavigator
+    Left = 279
+    Top = 291
+    Width = 540
+    Height = 35
+    DataSource = ds1
+    TabOrder = 0
+  end
+  object dbgrd1: TDBGrid
+    Left = 8
+    Top = 44
+    Width = 891
+    Height = 241
+    Color = clWhite
+    DataSource = ds1
+    FixedColor = 14876158
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+  object dbdtID: TDBEdit
+    Left = 87
+    Top = 301
+    Width = 154
+    Height = 28
+    Color = clWhite
+    DataField = 'ID'
+    DataSource = ds1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object dbmmoRef1: TDBMemo
+    Left = 87
+    Top = 330
+    Width = 154
+    Height = 23
+    Color = clWhite
+    DataField = 'Ref'
+    DataSource = ds1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object dbmmoFirstname1: TDBMemo
+    Left = 87
+    Top = 359
+    Width = 154
+    Height = 23
+    Color = clWhite
+    DataField = 'Firstname'
+    DataSource = ds1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object dbmmoLastname1: TDBMemo
+    Left = 87
+    Top = 388
+    Width = 154
+    Height = 23
+    Color = clWhite
+    DataField = 'Lastname'
+    DataSource = ds1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+  end
+  object dbmmoTel1: TDBMemo
+    Left = 87
+    Top = 417
+    Width = 154
+    Height = 23
+    Color = clWhite
+    DataField = 'Tel'
+    DataSource = ds1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+  end
+  object asrchbx1: TAsSearchBox
+    Left = 73
+    Top = 12
+    Width = 273
+    Height = 25
+    Color = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 7
+    SearchDataSet = dmData.QryClient
+    SearchItems = <
+      item
+        FieldName = 'ID'
+        Enabled = True
+        Options.UseQuotedStr = False
+      end
+      item
+        FieldName = 'Ref'
+        Enabled = True
+        Options.UseQuotedStr = False
+      end
+      item
+        FieldName = 'Firstname'
+        Enabled = True
+        Options.UseQuotedStr = False
+      end
+      item
+        FieldName = 'Lastname'
+        Enabled = True
+        Options.UseQuotedStr = False
+      end
+      item
+        FieldName = 'Tel'
+        Enabled = True
+        Options.UseQuotedStr = False
+      end>
+    SearchColor = clWindow
+    SearchColorFound = 12582847
+    SearchColorNotFound = 14145535
+  end
+  object ds1: TDataSource
+    DataSet = dmData.QryClient
+    Left = 704
+    Top = 320
+  end
+end

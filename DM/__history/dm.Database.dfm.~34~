@@ -1,0 +1,69 @@
+object dmData: TdmData
+  Height = 188
+  Width = 332
+  object fdConn: TFDConnection
+    Params.Strings = (
+      
+        'Database=D:\Delphi Projects\Bm projects for me\GestClients\DEPLO' +
+        'Y\APP\Data2\Clients2.db'
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 56
+    Top = 24
+  end
+  object DriverSqlite: TFDPhysSQLiteDriverLink
+    Left = 144
+    Top = 24
+  end
+  object fdWaitCursor: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 232
+    Top = 24
+  end
+  object QryClient: TFDQuery
+    Active = True
+    Connection = fdConn
+    FetchOptions.AssignedValues = [evItems]
+    UpdateOptions.AssignedValues = [uvEDelete, uvEInsert, uvEUpdate]
+    SQL.Strings = (
+      '  SELECT * FROM MyClients'
+      ' ')
+    Left = 56
+    Top = 120
+    object intgrfldQryClientID: TIntegerField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object wdstrngfldQryClientRef: TWideStringField
+      DisplayWidth = 50
+      FieldName = 'Ref'
+      Origin = 'Ref'
+      Required = True
+      Size = 100
+    end
+    object wdstrngfldQryClientFirstname: TWideStringField
+      DisplayWidth = 50
+      FieldName = 'Firstname'
+      Origin = 'Firstname'
+      Required = True
+      Size = 100
+    end
+    object wdstrngfldQryClientLastname: TWideStringField
+      DisplayWidth = 50
+      FieldName = 'Lastname'
+      Origin = 'Lastname'
+      Required = True
+      Size = 100
+    end
+    object intgrfldQryClientTel: TIntegerField
+      DisplayWidth = 25
+      FieldName = 'Tel'
+      Origin = 'Tel'
+      Required = True
+    end
+  end
+end
